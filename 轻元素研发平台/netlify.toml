@@ -1,0 +1,20 @@
+[build]
+  publish = "public"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# 说明：
+# 1) 本项目的三个函数用 config.path 直接挂在 /api/xxx 上，不需要额外 redirect。
+# 2) 以后如果加了前端路由兜底（/* -> /index.html），它必须排在 /api/* 之后，
+#    否则接口请求会被兜底成首页。写法：
+#    [[redirects]]
+#      from = "/api/*"
+#      to = "/api/:splat"
+#      status = 200
+#      force = true
+#    [[redirects]]
+#      from = "/*"
+#      to = "/index.html"
+#      status = 200

@@ -1,0 +1,10 @@
+{
+  "name": "qingyuansu-rd-platform",
+  "private": true,
+  "description": "轻元素·研发平台 - 飞书网页应用（Netlify Functions）",
+  "devDependencies": {
+    "@netlify/functions": "^2.8.0",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}
